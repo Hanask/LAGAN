@@ -197,7 +197,7 @@ def build_models():
 
 if __name__ == "__main__":
 
-    os.chdir(r"/home/rookie/cwt/ControlGAN/code")  # 修改当前工作目录
+    os.chdir(r"D:\OtherProjects\ControlGAN\code")  # 修改当前工作目录
 
     print(os.getcwd())  # 获取当前工作目录
 
@@ -245,7 +245,7 @@ if __name__ == "__main__":
     batch_size = cfg.TRAIN.BATCH_SIZE
     image_transform = transforms.Compose([
         # transforms.Scale(int(imsize * 76 / 64)),
-        transforms.Scale(int(imsize * 65 / 64)),
+        transforms.Resize(int(imsize * 65 / 64)),
         # transforms.Scale(int(imsize)),
         transforms.RandomCrop(imsize),
         transforms.RandomHorizontalFlip()

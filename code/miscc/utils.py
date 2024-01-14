@@ -189,7 +189,7 @@ def build_super_images(real_imgs,
                                                            sigma=20,
                                                            upscale=vis_size //
                                                            att_sze,
-                                                           multichannel=True)
+                                                           channel_axis=-1)
             row_beforeNorm.append(one_map)
             minV = one_map.min()
             maxV = one_map.max()
